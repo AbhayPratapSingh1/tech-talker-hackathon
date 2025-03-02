@@ -2,7 +2,6 @@ import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 
 
 export const logInRequest = createAsyncThunk('app/logInRequest', async (data) => {
-    console.log("url : ",process.env.REACT_APP_API_URL)
     let response = await fetch(`${process.env.REACT_APP_API_URL}/log-in`, {
         method: "POST",
         body: JSON.stringify(data)
@@ -15,7 +14,7 @@ export const logInRequest = createAsyncThunk('app/logInRequest', async (data) =>
     return response.json();
 });
 export const signInRequest = createAsyncThunk('app/signInRequest', async (data) => {
-    let response = await fetch(`http://127.0.0.1:5000/sign-in`, {
+    let response = await fetch(`${process.env.REACT_APP_API_URL}/sign-in`, {
         method: "POST",
         body: JSON.stringify(data)
     })
@@ -31,7 +30,7 @@ export const findFriendRequest = createAsyncThunk('app/findFriendRequest', async
 
     const token = localStorage.getItem('token');
     if (token) {
-        const response = await fetch(`http://127.0.0.1:5000/find-friend`, {
+        const response = await fetch(`${process.env.REACT_APP_API_URL}/find-friend`, {
             method: "POST",
             headers: {
                 'Content-Type': 'application/json',
@@ -56,7 +55,7 @@ export const addFriendRequest = createAsyncThunk('app/addFriendRequest', async (
 
     const token = localStorage.getItem('token');
     if (token) {
-        const response = await fetch(`http://127.0.0.1:5000/add-friend`, {
+        const response = await fetch(`${process.env.REACT_APP_API_URL}/add-friend`, {
             method: "POST",
             headers: {
                 'Content-Type': 'application/json',
