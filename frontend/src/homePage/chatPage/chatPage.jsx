@@ -30,8 +30,6 @@ const ChatPage = ({ page, user, socketRef, selectedId }) => {
                 console.log(textArray)
             }
         }
-        "asd".
-        console.log(textArray)
         textArray = textArray.split(" ")
         for (let i = 0; i < textArray.length; i++) {
             let word = textArray[i]
