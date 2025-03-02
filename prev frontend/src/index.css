@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.bgChats {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    
+}
+
+
+.bgChats::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: translateY(-60px);
+    background-image: url('../public/chatBg.png'); /* Replace with your icon path */
+    background-repeat: repeat; /* Repeat only horizontally */
+    background-size: 600px auto; /* Adjust size, maintain aspect ratio */
+    opacity: 0.1; /* Set opacity to very low */
+    z-index: -20; /* Place behind other content */
+    pointer-events: none; /* Make it unclickable */
+}

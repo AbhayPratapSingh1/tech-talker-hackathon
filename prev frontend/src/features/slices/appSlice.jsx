@@ -2,8 +2,7 @@ import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 
 
 export const logInRequest = createAsyncThunk('app/logInRequest', async (data) => {
-    console.log("url : ",process.env.REACT_APP_API_URL)
-    let response = await fetch(`${process.env.REACT_APP_API_URL}/log-in`, {
+    let response = await fetch(`http://127.0.0.1:5000/log-in`, {
         method: "POST",
         body: JSON.stringify(data)
     })

@@ -44,10 +44,7 @@ const UsersPage = ({ page, users, setSingleUser }) => {
                                 </div>
                             </div>
                             <div className="flex flex-col gap-1 items-end justify-between">
-                                {each.newMess
-                                    &&
-                                    <div className={`rounded-full h-5 w-5  justify-center ${each.noOfText != 0 ? "bg-green-500" : ""} flex  items-center text-[11px]`}>{each.noOfText ? each.noOfText : ""}</div>
-                                }
+                                {/* <div className={`rounded-full h-5 w-5  justify-center ${each.noOfText != 0 ? "bg-green-500" : ""} flex  items-center text-[11px]`}>{each.noOfText ? each.noOfText : ""}</div> */}
                                 <div className="text-[12px]">{time}</div>
                             </div>
                         </div>
