@@ -1,0 +1,7 @@
+Flask
+Flask-SocketIO
+Flask-CORS
+Flask-SQLAlchemy
+Flask-JWT-Extended
+PyJWT
+gunicorn
